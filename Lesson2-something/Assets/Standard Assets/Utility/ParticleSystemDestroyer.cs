@@ -45,11 +45,6 @@ namespace UnityStandardAssets.Utility
                 emission.enabled = false;
             }
             BroadcastMessage("Extinguish", SendMessageOptions.DontRequireReceiver);
-
-            // wait for any remaining particles to expire
-            yield return new WaitForSeconds(m_MaxLifetime);
-
-            Destroy(gameObject);
         }
 
 
